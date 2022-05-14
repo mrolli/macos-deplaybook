@@ -1,0 +1,23 @@
+---
+- hosts: all
+
+  vars_files:
+    - default.config.yml
+
+  roles: []
+
+  tasks:
+  - name: Ooutput hostname
+    shell:
+      cmd: hostname -f
+    register: hostname
+
+  - name: Uptime
+    ansible.builtin.shell: uptime
+    register: uptime
+    changed_when: false
+
+  - name: output uptime
+    ansible.builtin.debug:
+      msg: "{{ hostname.stdout }}: {{ uptime.stdout }}"
+
