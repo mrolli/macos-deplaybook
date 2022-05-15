@@ -11,13 +11,14 @@
     shell:
       cmd: hostname -f
     register: hostname
+    changed_when: false
 
   - name: Uptime
     ansible.builtin.shell: uptime
     register: uptime
     changed_when: false
 
-  - name: output uptime
+  - name: Output hostname and uptime
     ansible.builtin.debug:
       msg: "{{ hostname.stdout }}: {{ uptime.stdout }}"
 
