@@ -14,7 +14,7 @@ echo "Upgrading pip"
 pkg_list=$($pip3_os list)
 # Install ansible related packages if needed
 echo "Now installing required packages"
-for pkg in ansible ansible-lint paramiko
+for pkg in ansible ansible-lint molecule paramiko yamllint
 do
   [[ "$pkg_list" =~ ${pkg}[[:space:]] ]] || \
     ( echo "Installing ${pkg}" && $pip3_os install --user $pkg)
