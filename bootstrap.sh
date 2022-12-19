@@ -19,20 +19,20 @@ else
   echo "Xcode CLI tools OK"
 fi
 
-echo ""
-
 # upgrade pip to latest version
-echo "Upgrading pip"
+printf '\nUpgrading pip\n'
 $pip3_os install --user --upgrade pip
 
+printf '\nInstalling required packages\n'
 pkg_list=$($pip3_os list)
-# Install ansible related packages if needed
-echo "Now installing required packages"
 for pkg in ansible ansible-lint molecule paramiko yamllint; do
   [[ "$pkg_list" =~ ${pkg}[[:space:]] ]] || \
     ( echo "Installing ${pkg}" && $pip3_os install --user $pkg)
 done
+echo "Installed all required packpages"
 
+
+printf '\nConfiguring the current shell\n'
 if [ "$SHELL" = /bin/zsh ]; then
   shell_config=~/.zshrc
 else
@@ -47,10 +47,8 @@ if ! grep "Library/Python" ~/.zshrc &>/dev/null; then
   echo "export PATH=~/Library/Python/3.9/bin/:$PATH" >> "$shell_config"
 fi
 
-echo "Installed all required packpages"
-
 if ! command -v ansible &>/dev/null; then
-  echo "Now run: source $shell_config"
+  printf 'You need to run the following command:\nsource %s\n' "$shell_config"
 fi
 
 exit 0
