@@ -1,13 +1,14 @@
+---
 session_name: macos-deplaybook
 global_options:
   automatic-rename: 'off'
 start_directory: ./
 windows:
-- window_name: macos-deplaybook
-  layout: main-horizontal
-  options:
-    main-pane-height: 80%
-  focus: true
-  panes:
+  - window_name: macos-deplaybook
+    layout: main-horizontal
+    options:
+      main-pane-height: 80%
+    focus: true
+    panes:
   - focus: true
   - pane
