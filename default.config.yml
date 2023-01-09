@@ -1,1 +1,131 @@
 ---
+downloads: ~/.ansible-downloads/
+
+homebrew_taps:
+  - homebrew/core
+  - homebrew/cask
+  - homebrew/cask-fonts
+
+homebrew_installed_packages:
+#  - asciinema
+  - bash
+  - bash-completion@2
+  - bat
+  - ca-certificates
+#  - composer
+  - coreutils
+  - cowsay
+  - ctags
+  - direnv
+  - dos2unix
+#  - duti
+  - exiftool
+  - fd
+#  - ffmpeg
+  - findutils
+  - fswatch
+  - fzf
+  - gd
+  - gettext
+  - gh
+  - git
+  - glib
+  - glow
+  - gnu-sed
+  - gnupg
+#  - go
+  - grip
+  - harfbuzz
+  - imagemagick
+#  - mariadb
+  - mas
+  - moreutils
+#  - mysql-client
+  - neofetch
+  - neovim
+  - node
+  - node@16
+  - p7zip
+  - packer
+  - packer-completion
+#  - php
+  - pinentry-mac
+  - pnpm
+  - podman
+  - pstree
+#  - Python@3.10
+#  - Python@3.9
+  - ripgrep
+  - rsync
+  - rubberband
+  - shellcheck
+  - starship
+#  - stow
+  - telnet
+  - tmux
+  - tmux-mem-cpu-load
+  - tmuxp
+  - vagrant-completion
+#  - vim
+  - wallpaper   # used by theme switcher
+  - watch
+  - webp   # for handling webp images
+  - wget
+  - xz
+  - yamllint
+  - yarn
+  - youtube-dl
+
+homebrew_cask_appdir: /Applications
+homebrew_cask_apps:
+#  - alacritty
+  - 1password-cli
+  - 1password
+#  - ableton-live-suite10
+  - alfred
+  - appcleaner
+  - firefox
+  -  font-meslo-lg-nerd-font
+  - gitup
+#  - guitar-pro
+#  - horos
+  - iina
+  - iterm2
+  - karabiner-elements
+  - keycastr
+  - miniconda
+#  - native-access
+#  - omnigraffle
+  - protonvpn
+  - rar
+  - spotify
+#  - sequel-pro
+#  - textmate
+#  - vagrant
+#  - vcv-rack
+#  - virtualbox
+#  - virtualbox-extension-pack
+#  - webex-meetings
+#  - zoom
+
+# See `geerlingguy.mas` role documentation for usage instructions.
+mas_installed_apps:
+  - 1569813296 # 1Password for Safari
+  - 417375580   # BetterSnapTool
+  - 425264550   # Blackmagic Disk Speed Test
+#  - 1482920575   # DuckDuckGo Privacy Essentials
+  - 1500241909   # iFinance 5
+#  - 408981434   # iMovie
+#  - 408981434   # iMovie 9.0.9
+#  - 634148309   # Logic Pro X
+  - 430255202   # Mactracker
+#  - 1295203466   # Microsoft Remote Desktop 10
+#  - 1041465860   # Model 15
+#  - 823766827   # OneDrive
+  - 1453365242   # Brother P-touch Editor
+  - 764936294   # Purple Tree
+#  - 1315583175   # Recipe Keeper
+  - 409907375   # Remote Desktop
+
+mas_email: ""
+mas_password: ""

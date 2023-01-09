@@ -11,12 +11,14 @@
         - "{{ playbook_dir }}/config.yml"
       tags: ['always']
 
-  tasks:
-  - name: Ooutput hostname
-    shell:
-      cmd: hostname -f
-    register: hostname
-    changed_when: false
+  roles:
+    - role: elliotweiser.osx-command-line-tools
+    - role: geerlingguy.mac.homebrew
+    - role: geerlingguy.mac.mas
+      tags: ['homebrew']
+    - role: geerlingguy.mac.mas
+      when: mas_installed_apps or mas_installed_app_ids
+      tags: ['mas']
 
   - name: Uptime
     ansible.builtin.shell: uptime
