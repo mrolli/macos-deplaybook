@@ -24,7 +24,18 @@
       when: configure_dotfiles
       tags: ['dotfiles']
 
-  - name: Output hostname and uptime
-    ansible.builtin.debug:
-      msg: "{{ hostname.stdout }}: {{ uptime.stdout }}"
+    - import_tasks: tasks/macos.yml
+      when: configure_macos
+      tags: ['macos']
+
+    - block:
+        - name: Uptime
+          ansible.builtin.shell: uptime
+          register: uptime
+          changed_when: false
+
+        - name: Output hostname and uptime
+          ansible.builtin.debug:
+            msg: "{{ ansible_hostname }}: {{ uptime.stdout }}"
+      tags: ['post']
 
