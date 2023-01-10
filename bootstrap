@@ -1,14 +1,37 @@
 #!/usr/bin/env bash
 
+# Changing the hostname if requested to do so
+while true; do
+  printf 'Do you want me to change the hostname of this machine? (y/n) ' 
+  read -r -n 1 reply
+
+  case $reply in 
+    [yY])
+      printf '\nWhich short hostname should I set? ' 
+      read -r myhostname
+      sudo scutil --set ComputerName "${myhostname}"
+      sudo scutil --set HostName "${myhostname}"
+      sudo scutil --set LocalHostName "${myhostname}"
+      sudo defaults write /Library/Preferences/SystemConfiguration/com.apple.smb.server NetBIOSName -string "${myhostname}"
+      printf '\nHostname set to %s\n' "${myhostname}"
+      break;;
+    [n/N])
+      printf '\nSkipping hostname setup\n'
+      break;;
+    *)
+      printf " $(tput setaf 124)invalid response$(tput sgr0)\n";;
+  esac
+done
+
 # All done with the system python3
 pip3_os="/usr/bin/python3 -m pip"
 
-echo "Checking Xcode CLI tools"
+printf '\nChecking Xcode CLI tools\n'
 # Only run if the tools are not installed yet
 # To check that try to print the SDK path
 xcode-select -p &> /dev/null
 if [ $? -ne 0 ]; then
-  echo "Xcode CLI tools not found. Installing them..."
+  printf 'Xcode CLI tools not found. Installing them...\n'
   touch /tmp/.com.apple.dt.CommandLineTools.installondemand.in-progress
   PROD=$(softwareupdate -l |
     grep "\*.*Command Line" |
@@ -16,7 +39,7 @@ if [ $? -ne 0 ]; then
   softwareupdate -i "$PROD" --verbose;
   touch /tmp/.com.apple.dt.CommandLineTools.installondemand.in-progress;
 else
-  echo "Xcode CLI tools OK"
+  printf 'Xcode CLI tools OK\n'
 fi
 
 # upgrade pip to latest version
@@ -27,9 +50,9 @@ printf '\nInstalling required packages\n'
 pkg_list=$($pip3_os list)
 for pkg in ansible ansible-lint molecule paramiko yamllint; do
   [[ "$pkg_list" =~ ${pkg}[[:space:]] ]] || \
-    ( echo "Installing ${pkg}" && $pip3_os install --user $pkg)
+    ( printf 'Installing %s\n' "${pkg}" && $pip3_os install --user $pkg)
 done
-echo "Installed all required packpages"
+printf 'Installed all required packpages\n'
 
 
 printf '\nConfiguring the current shell\n'
