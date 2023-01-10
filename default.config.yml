@@ -1,6 +1,15 @@
 ---
 downloads: ~/.ansible-downloads/
 
+configure_dotfiles: true
+configure_terminal: false
+configure_osx: false
+
+dotfiles_repo: https://github.com/mrolli/dotfiles.git
+dotfiles_repo_version: main
+dotfiles_repo_accept_hostkey: true
+dotfiles_repo_local_destination: ~/.dotfiles
+
 homebrew_taps:
   - homebrew/core
   - homebrew/cask
@@ -60,7 +69,7 @@ homebrew_installed_packages:
   - rubberband
   - shellcheck
   - starship
-#  - stow
+  - stow
   - telnet
   - tmux
   - tmux-mem-cpu-load
