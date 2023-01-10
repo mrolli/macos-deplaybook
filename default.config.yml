@@ -2,6 +2,9 @@
 downloads: ~/.ansible-downloads/
 
 configure_dotfiles: true
+configure_usershell: true
+#default_usershell: "{{ homebrew_prefix}}/bin/bash"
+default_usershell: "/bin/zsh"
 configure_terminal: false
 
 configure_macos: true

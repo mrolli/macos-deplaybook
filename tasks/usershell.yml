@@ -1,0 +1,17 @@
+---
+- name: Register current user shell.
+  ansible.builtin.command: dscl . -read ~/ UserShell
+  register: current_usershell
+  changed_when: false
+
+- name: Add expected default usershell to /etc/shell.
+  ansible.builtin.lineinfile:
+    path: /etc/shells
+    line: "{{ default_usershell }}"
+    state: present
+  become: true
+
+- name: Set user shell to homebrew installed bash
+  ansible.builtin.command: chsh -s "{{ default_usershell }}" "{{ ansible_user_id }}"
+  when: "default_usershell not in current_usershell.stdout"
+  become: true
