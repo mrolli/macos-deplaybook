@@ -4,6 +4,12 @@
   register: current_usershell
   changed_when: false
 
+- name: Check if expected usershell is installed
+  ansible.builtin.command: '[ -x "{{ default_usershell }}" ]'
+  register: usershell_available
+  changed_when: false
+  failed_when: "usershell_available.rc != 0"
+
 - name: Add expected default usershell to /etc/shell.
   ansible.builtin.lineinfile:
     path: /etc/shells
