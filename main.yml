@@ -28,6 +28,10 @@
       when: configure_macos
       tags: ['macos']
 
+    - import_tasks: tasks/iterm2.yml
+      when: configure_apps
+      tags: ['iterm2']
+
     - import_tasks: tasks/lunarvim.yml
       when: configure_apps
       tags: ['lunarvim']

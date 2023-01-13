@@ -1,0 +1,28 @@
+---
+- name: Set LoadPrefsFromCustomFolder
+  ansible.builtin.osx_defaults:
+    domain: com.googlecode.iterm2
+    key: LoadPrefsFromCustomFolder
+    type: int
+    value: 1
+
+- name: Set prefs file location
+  ansible.builtin.osx_defaults:
+    domain: com.googlecode.iterm2
+    key:  PrefsCustomFolder
+    type: string
+    value: "/Users/{{ ansible_user_id }}/.dotfiles/iterm2/"
+
+- name: Set saving preferences to manual
+  ansible.builtin.osx_defaults:
+    domain: com.googlecode.iterm2
+    key: NoSyncNeverRemindPrefsChangesLostForFile_selection
+    type: int
+    value: 1
+
+- name: Enable automatic update checks
+  ansible.builtin.osx_defaults:
+    domain: com.googlecode.iterm2
+    key: SUEnableAutomaticChecks
+    type: int
+    value: 1
