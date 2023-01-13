@@ -1,0 +1,44 @@
+- name: Install lunarvim's prerequisites.
+  community.general.homebrew:
+    name: "{{ item }}"
+    state: present
+    update_homebrew: false
+  with_items:
+    - git
+    - node
+    - rust
+    - yarn
+
+- name: Check if lunarvim is installed.
+  ansible.builtin.stat: path="~/.local/share/lunarvim/lvim"
+  register: lunarvim_exists
+
+- block:
+    - name: Download Lunarvim installer
+      ansible.builtin.get_url:
+        url: https://raw.githubusercontent.com/lunarvim/lunarvim/{{ lunarvim_installer_version }}/utils/installer/install.sh
+        dest: /tmp/lunarvim_installer.sh
+        mode: '0755'
+ 
+    - name: Run Lunarvim installer
+      ansible.builtin.shell:
+        cmd: LV_BRANCH="{{ lunarvim_release_branch }}" /tmp/lunarvim_installer.sh --no-install-dependencies
+        executable: /bin/bash
+
+    - name: Remove installer script
+      ansible.builtin.file:
+        path: /tmp/lunarvim_installer.sh
+        state: absent
+
+    - name: Remove default config
+      ansible.builtin.file:
+        path: ~/.config/lvim
+        state: absent
+  when: "lunarvim_exists.stat.exists == false"
+
+- name: Place personal config
+  ansible.builtin.git:
+    repo: "{{ lunarvim_config_repo }}"
+    dest: ~/.config/lvim
+    version: "{{ lunarvim_config_repo_version }}"
+    accept_newhostkey: true
