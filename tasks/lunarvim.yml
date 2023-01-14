@@ -19,7 +19,7 @@
         url: https://raw.githubusercontent.com/lunarvim/lunarvim/{{ lunarvim_installer_version }}/utils/installer/install.sh
         dest: /tmp/lunarvim_installer.sh
         mode: '0755'
- 
+
     - name: Run Lunarvim installer
       ansible.builtin.shell:
         cmd: LV_BRANCH="{{ lunarvim_release_branch }}" /tmp/lunarvim_installer.sh --no-install-dependencies
