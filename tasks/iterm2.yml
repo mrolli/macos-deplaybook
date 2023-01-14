@@ -11,7 +11,7 @@
     domain: com.googlecode.iterm2
     key:  PrefsCustomFolder
     type: string
-    value: "/Users/{{ ansible_user_id }}/.dotfiles/iterm2/"
+    value: "{{ dotfiles_repo_local_destination }}/iterm2/"
 
 - name: Set saving preferences to manual
   ansible.builtin.osx_defaults:
