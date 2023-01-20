@@ -2,6 +2,15 @@
 downloads: ~/.ansible-downloads/
 
 configure_dotfiles: true
+dotfiles_repo: https://github.com/mrolli/dotfiles.git
+dotfiles_repo_version: main
+dotfiles_repo_accept_hostkey: true
+dotfiles_repo_local_destination: "/Users/{{ ansible_user_id }}/.dotfiles"
+
+configure_terminal: true
+
+configure_macos: true
+macos_script: "~/.macos --no-restart"
 
 configure_apps: true
 lunarvim_installer_version: fc6873809934917b470bff1b072171879899a36b
@@ -12,15 +21,6 @@ lunarvim_config_repo_version: main
 configure_usershell: true
 #default_usershell: "{{ homebrew_prefix}}/bin/bash"
 default_usershell: "/bin/zsh"
-configure_terminal: false
-
-configure_macos: true
-macos_script: "~/.macos --no-restart"
-
-dotfiles_repo: https://github.com/mrolli/dotfiles.git
-dotfiles_repo_version: main
-dotfiles_repo_accept_hostkey: true
-dotfiles_repo_local_destination: "/Users/{{ ansible_user_id }}/.dotfiles"
 
 homebrew_taps:
   - homebrew/core
