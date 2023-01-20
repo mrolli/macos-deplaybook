@@ -27,6 +27,7 @@ Once on the desktop of my freshly installed Mac is ready:
   - Microsoft Office
       - fetch latest from https://portal.office.com
       - see also the [KB article](https://serviceportal.unibe.ch/sp?id=kb_article_view&sys_kb_id=b0d605bedb50901078ed3e482296199e)
+      - Start Word for the first time and login to M365 to activate Office
   - Forticlient
     - fetch [latest FortiClient](https://secdl.unibe.ch/FortiClientVPNSetup-MacOSX-current.dmg)
     - follow this [KB article](https://serviceportal.unibe.ch/sp?id=kb_article_view&sys_kb_id=3f0029691b005050134ddc6a9b4bcb26)
