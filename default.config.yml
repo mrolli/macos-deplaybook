@@ -109,6 +109,7 @@ homebrew_cask_apps:
   - firefox
   -  font-meslo-lg-nerd-font
   - gitup
+#  - gray
 #  - guitar-pro
 #  - horos
   - iina
