@@ -152,6 +152,7 @@ mas_installed_apps:
   - 409907375    # Remote Desktop
   - 1573919086   # Total Refresh (Safari Extension)
   - 1480933944   # Vimari (Safari Extension(
+  - 1230249825   # VMware Remote Console
 
 mas_email: ""
 mas_password: ""
