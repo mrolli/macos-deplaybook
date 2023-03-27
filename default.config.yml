@@ -107,7 +107,8 @@ homebrew_cask_apps:
   - alfred
   - appcleaner
   - firefox
-  -  font-meslo-lg-nerd-font
+  - font-jetbrains-mono
+  - font-symbols-only-nerd-font
   - gitup
 #  - gray
 #  - guitar-pro
