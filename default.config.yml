@@ -58,6 +58,7 @@ homebrew_installed_packages:
   - grip
   - harfbuzz
   - imagemagick
+  - lazygit
 #  - mariadb
   - mas
   - moreutils
