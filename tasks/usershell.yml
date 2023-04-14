@@ -10,14 +10,14 @@
   changed_when: false
   failed_when: "usershell_available.rc != 0"
 
-- name: Add expected default usershell to /etc/shell.
+- name: Make usershell avaialble as login shell if needed.
   ansible.builtin.lineinfile:
     path: /etc/shells
     line: "{{ default_usershell }}"
     state: present
   become: true
 
-- name: Set user shell to homebrew installed bash
+- name: Set user shell to {{ default_usershell }}
   ansible.builtin.command: chsh -s "{{ default_usershell }}" "{{ ansible_user_id }}"
   when: "default_usershell not in current_usershell.stdout"
   become: true
