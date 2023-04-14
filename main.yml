@@ -29,7 +29,7 @@
       tags: ['macos']
 
     - import_tasks: tasks/iterm2.yml
-      when: configure_apps
+      when: configure_terminal
       tags: ['iterm2']
 
     - import_tasks: tasks/nvim.yml
