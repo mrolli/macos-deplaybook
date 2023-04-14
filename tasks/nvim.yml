@@ -13,4 +13,5 @@
   ansible.builtin.git:
     repo: "{{ nvim_config_repo }}"
     dest: ~/.config/nvim
-    accept_newhostkey: true
+    accept_newhostkey: "{{ gitmod_accept_newhostkey }}"
+    update: false

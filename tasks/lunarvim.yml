@@ -41,4 +41,5 @@
     repo: "{{ lunarvim_config_repo }}"
     dest: ~/.config/lvim
     version: "{{ lunarvim_config_repo_version }}"
-    accept_newhostkey: true
+    accept_newhostkey: "{{ gitmod_accept_newhostkey }}"
+    update: false
