@@ -1,0 +1,16 @@
+# Requirements according https://www.lazyvim.org/#%EF%B8%8F-requirements
+---
+- name: Install nvim prerequisites.
+  community.general.homebrew:
+    name: "{{ item }}"
+    state: present
+    update_homebrew: false
+  with_items:
+    - neovim
+    - git
+
+- name: Place personal config
+  ansible.builtin.git:
+    repo: "{{ nvim_config_repo }}"
+    dest: ~/.config/nvim
+    accept_newhostkey: true

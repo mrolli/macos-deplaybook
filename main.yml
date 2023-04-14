@@ -32,9 +32,9 @@
       when: configure_apps
       tags: ['iterm2']
 
-    - import_tasks: tasks/lunarvim.yml
+    - import_tasks: tasks/nvim.yml
       when: configure_apps
-      tags: ['lunarvim']
+      tags: ['nvim']
 
     - import_tasks: tasks/usershell.yml
       when: configure_usershell
