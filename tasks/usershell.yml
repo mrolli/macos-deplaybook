@@ -19,5 +19,23 @@
 
 - name: Set user shell to {{ default_usershell }}
   ansible.builtin.command: chsh -s "{{ default_usershell }}" "{{ ansible_user_id }}"
-  when: "default_usershell not in current_usershell.stdout"
+  when: default_usershell not in current_usershell.stdout
   become: true
+
+- name: "Manage shell configuration for zsh"
+  block:
+  - name: Fetch my configuration repo for zsh
+    ansible.builtin.git:
+      repo: "{{ zsh_config_repo_url }}"
+      dest: "{{ zsh_config_repo_dest }}"
+      accept_newhostkey: true
+
+  - name: Symlink zshenv to home directory
+    ansible.builtin.file:
+      src: "{{ zsh_config_repo_dest }}/zshenv"
+      dest: ~/.zshenv
+      owner: "{{ ansible_user }}"
+      group: staff
+      state: link
+      force: true
+  when: default_usershell == "/bin/zsh"
