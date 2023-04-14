@@ -4,13 +4,13 @@ Although a lot of things can be automated, there are cases where this is not
 possible, i.e. chicken-egg issues, or not worth the effort. Therefore manual steps
 are needed. These are outlined here:
 
-## Initial configuration of a Brand New Mac
+## Initial Configuration Of a Brand New Mac
 
 Before starting, I completed Apple's mandatory macOS setup wizard that includes
 
 - creating a local user account
 - (optionally) signing into my iCloud account
-- (optionally) setting up stuff like Touch ID
+- (optionally) setting up stuff like TouchID
 
 Once on the desktop of my freshly installed Mac is ready:
 
@@ -31,7 +31,10 @@ Once on the desktop of my freshly installed Mac is ready:
   - Forticlient
     - fetch [latest FortiClient](https://secdl.unibe.ch/FortiClientVPNSetup-MacOSX-current.dmg)
     - follow this [KB article](https://serviceportal.unibe.ch/sp?id=kb_article_view&sys_kb_id=3f0029691b005050134ddc6a9b4bcb26)
+- Data synchronization
+  - iFinance: Sync latest DB from another device
 - Manual settings to automate someday:
   - Safari:
     - activate additional extensions: AdGuard, Total Refresh, Vimari
-- When all resources are available: Run the playbook `main.yml` with `--tags post` to complete the setup
+
+When all resources are available: Run the playbook `main.yml` with `--tags post` to complete the setup
