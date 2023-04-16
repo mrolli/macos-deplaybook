@@ -131,6 +131,7 @@ homebrew_cask_apps:
 #  - virtualbox
 #  - virtualbox-extension-pack
 #  - webex-meetings
+  - wezterm
 #  - zoom
 
 # See `geerlingguy.mas` role documentation for usage instructions.
