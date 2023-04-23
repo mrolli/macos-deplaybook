@@ -4,7 +4,7 @@ Although a lot of things can be automated, there are cases where this is not
 possible, i.e. chicken-egg issues, or not worth the effort. Therefore manual steps
 are needed. These are outlined here:
 
-## Initial Configuration Of a Brand New Mac
+## Initial Configuration Of a Brand new Mac
 
 Before starting, I completed Apple's mandatory macOS setup wizard that includes
 
@@ -20,6 +20,8 @@ Once on the desktop of my freshly installed Mac is ready:
 - Start Synchronization tasks:
   - Open Photos and make sure iCloud sync options are correct
   - Open Music, make sure computer is authorized, and set Library sync options
+- Configure 1Password CLI usage to be able to retrieve secrets
+  - see https://developer.1password.com/docs/cli/get-started/#install
 - Configure github.com authentication for gh and git
   - Run `gh auth login` and follow the https procedure
   - Copy `~/.gnupg` from another device for the time being # TODO: Put this in 1password and dotfiles
