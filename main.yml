@@ -9,40 +9,36 @@
       include_vars: "{{ item }}"
       with_fileglob:
         - "{{ playbook_dir }}/config.yml"
-      tags: ['always']
+      tags: ["always"]
 
   roles:
     - role: elliotweiser.osx-command-line-tools
     - role: geerlingguy.mac.homebrew
-      tags: ['homebrew']
+      tags: ["homebrew"]
     - role: geerlingguy.mac.mas
       when: mas_installed_apps or mas_installed_app_ids
-      tags: ['mas']
+      tags: ["mas"]
 
   tasks:
     - import_tasks: tasks/dotfiles.yml
       when: configure_dotfiles
-      tags: ['dotfiles']
+      tags: ["dotfiles"]
 
     - import_tasks: tasks/macos.yml
       when: configure_macos
-      tags: ['macos']
-
-    - import_tasks: tasks/iterm2.yml
-      when: configure_terminal
-      tags: ['iterm2']
+      tags: ["macos"]
 
     - import_tasks: tasks/nvim.yml
       when: configure_apps
-      tags: ['nvim']
+      tags: ["nvim"]
 
     - import_tasks: tasks/usershell.yml
       when: configure_usershell
-      tags: ['usershell']
+      tags: ["usershell"]
 
     - import_tasks: tasks/zsh.yml
       when: default_usershell is search("zsh")
-      tags: ['zsh']
+      tags: ["zsh"]
 
     - block:
         - name: Uptime
@@ -53,5 +49,5 @@
         - name: Output hostname and uptime
           ansible.builtin.debug:
             msg: "{{ ansible_hostname }}: {{ uptime.stdout }}"
-      tags: ['post']
+      tags: ["post"]
 

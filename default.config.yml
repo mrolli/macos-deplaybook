@@ -116,7 +116,6 @@ homebrew_cask_apps:
 #  - guitar-pro
 #  - horos
   - iina
-  - iterm2
   - karabiner-elements
   - keycastr
   - miniconda
