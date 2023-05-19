@@ -8,10 +8,3 @@
   with_items:
     - neovim
     - git
-
-- name: Place personal config
-  ansible.builtin.git:
-    repo: "{{ nvim_config_repo }}"
-    dest: ~/.config/nvim
-    accept_newhostkey: "{{ gitmod_accept_newhostkey }}"
-    update: false
