@@ -47,3 +47,7 @@
             msg: "{{ ansible_hostname }}: {{ uptime.stdout }}"
       tags: ["post"]
 
+- name: Run dotfiles' Ansible playbook
+  import_playbook: "{{ lookup('ansible.builtin.env', 'HOME') }}/.dotfiles/ansible/main.yml"
+  become: false
+  tags: ["dotfiles"]
