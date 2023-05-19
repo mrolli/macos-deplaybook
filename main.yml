@@ -36,10 +36,6 @@
       when: configure_usershell
       tags: ["usershell"]
 
-    - import_tasks: tasks/zsh.yml
-      when: default_usershell is search("zsh")
-      tags: ["zsh"]
-
     - block:
         - name: Uptime
           ansible.builtin.shell: uptime
