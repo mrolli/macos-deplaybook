@@ -84,6 +84,7 @@ homebrew_installed_packages:
   - starship
   - stow
   - telnet
+  - tldr
   - tmux
   - tmux-mem-cpu-load
   - tmuxp
