@@ -20,8 +20,6 @@ configure_usershell: true
 default_usershell: "/bin/zsh"
 
 homebrew_taps:
-  - homebrew/core
-  - homebrew/cask
   - homebrew/cask-fonts
 
 homebrew_installed_packages:
