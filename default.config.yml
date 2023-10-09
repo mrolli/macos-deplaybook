@@ -21,6 +21,7 @@ default_usershell: "/bin/zsh"
 
 homebrew_taps:
   - homebrew/cask-fonts
+  - hashicorp/tap
 
 homebrew_installed_packages:
 #  - asciinema
@@ -64,7 +65,7 @@ homebrew_installed_packages:
   - node
   - node@16
   - p7zip
-  - packer
+  - hashicorp/tap/packer
   - packer-completion
 #  - php
   - pinentry-mac
