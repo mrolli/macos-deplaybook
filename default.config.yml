@@ -25,6 +25,7 @@ homebrew_taps:
 
 homebrew_installed_packages:
 #  - asciinema
+  - azure-cli
   - bash
   - bash-completion@2
   - bat
