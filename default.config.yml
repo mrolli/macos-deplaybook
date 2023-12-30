@@ -104,7 +104,7 @@ homebrew_cask_apps:
   #  - ableton-live-suite10
   - alfred
   - appcleaner
-  - homebrew/cask/docker
+  # - homebrew/cask/docker
   - firefox
   - font-jetbrains-mono
   - font-symbols-only-nerd-font
