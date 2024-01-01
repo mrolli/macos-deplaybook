@@ -64,6 +64,7 @@ homebrew_installed_packages:
   - neofetch
   - neovim
   - node
+  - ollama
   - p7zip
   - hashicorp/tap/packer
   #  - php
