@@ -16,7 +16,7 @@ configure_apps: true
 nvim_config_repo: https://github.com/mrolli/nvim.config.git
 
 configure_usershell: true
-#default_usershell: "{{ homebrew_prefix}}/bin/bash"
+# default_usershell: "{{ homebrew_prefix}}/bin/bash"
 default_usershell: "/bin/zsh"
 
 homebrew_taps:
@@ -86,9 +86,9 @@ homebrew_installed_packages:
   - tmuxp
   - vagrant-completion
   #  - vim
-  - wallpaper # used by theme switcher
+  - wallpaper   # used by theme switcher
   - watch
-  - webp # for handling webp images
+  - webp   # for handling webp images
   - wget
   - xz
   - yamllint
@@ -133,26 +133,26 @@ homebrew_cask_apps:
 
 # See `geerlingguy.mas` role documentation for usage instructions.
 mas_installed_apps:
-  - 1569813296 # 1Password for Safari
-  - 1440147259 # AdGuard for Safari (Safari Extension)
-  - 417375580 # BetterSnapTool
-  - 425264550 # Blackmagic Disk Speed Test
-  - 1453365242 # Brother P-touch Editor
+  - 1569813296   # 1Password for Safari
+  - 1440147259   # AdGuard for Safari (Safari Extension)
+  - 417375580   # BetterSnapTool
+  - 425264550   # Blackmagic Disk Speed Test
+  - 1453365242   # Brother P-touch Editor
   #  - 1482920575   # DuckDuckGo Privacy Essentials
-  - 1500241909 # iFinance 5
+  - 1500241909   # iFinance 5
   #  - 408981434    # iMovie
   #  - 408981434    # iMovie 9.0.9
   #  - 634148309    # Logic Pro X
-  - 430255202 # Mactracker
+  - 430255202   # Mactracker
   #  - 1295203466   # Microsoft Remote Desktop 10
   #  - 1041465860   # Model 15
   #  - 823766827    # OneDrive
-  - 764936294 # Purple Tree
+  - 764936294   # Purple Tree
   #  - 1315583175   # Recipe Keeper
-  - 409907375 # Remote Desktop
-  - 1573919086 # Total Refresh (Safari Extension)
-  - 1480933944 # Vimari (Safari Extension(
-  - 1230249825 # VMware Remote Console
+  - 409907375   # Remote Desktop
+  - 1573919086   # Total Refresh (Safari Extension)
+  - 1480933944   # Vimari (Safari Extension(
+  - 1230249825   # VMware Remote Console
 
 mas_email: ""
 mas_password: ""
