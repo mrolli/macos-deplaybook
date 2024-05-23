@@ -32,7 +32,6 @@ homebrew_installed_packages:
   - ca-certificates
   #  - composer
   - coreutils
-  - cowsay
   - ctags
   - direnv
   - dos2unix
