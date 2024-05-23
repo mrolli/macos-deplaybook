@@ -66,6 +66,8 @@ homebrew_installed_packages:
   - ollama
   - p7zip
   - hashicorp/tap/packer
+  - hashicorp/tap/terraform
+  - terraform-docs
   #  - php
   - pinentry-mac
   - pnpm
