@@ -135,27 +135,27 @@ homebrew_cask_apps:
 
 # See `geerlingguy.mas` role documentation for usage instructions.
 mas_installed_apps:
-  - 1569813296   # 1Password for Safari
-  - 1440147259   # AdGuard for Safari (Safari Extension)
-  - 417375580   # BetterSnapTool
-  - 425264550   # Blackmagic Disk Speed Test
-  - 1453365242   # Brother P-touch Editor
-  #  - 1482920575   # DuckDuckGo Privacy Essentials
-  - 1500241909   # iFinance 5
-  #  - 408981434    # iMovie
-  #  - 408981434    # iMovie 9.0.9
-  - 6472865291 # Keymapp
-  #  - 634148309    # Logic Pro X
-  - 430255202   # Mactracker
-  #  - 1295203466   # Microsoft Remote Desktop 10
-  #  - 1041465860   # Model 15
-  #  - 823766827    # OneDrive
-  - 764936294   # Purple Tree
-  #  - 1315583175   # Recipe Keeper
-  - 409907375   # Remote Desktop
-  - 1573919086   # Total Refresh (Safari Extension)
-  - 1480933944   # Vimari (Safari Extension(
-  - 1230249825   # VMware Remote Console
+  - { id: 1569813296, name: "1Password for Safari" }
+  - { id: 1440147259, name: "AdGuard for Safari (Safari Extension)" }
+  - { id: 417375580, name: "BetterSnapTool" }
+  - { id: 425264550, name: "Blackmagic Disk Speed Test" }
+  - { id: 1453365242, name: "Brother P-touch Editor" }
+  #- { id: 1482920575, name: "DuckDuckGo Privacy Essentials" }
+  - { id: 1500241909, name: "iFinance 5" }
+  #- { id: 408981434, name: "iMovie" }
+  #- { id: 408981434, name: "iMovie 9.0.9" }
+  - { id: 6472865291, name: "Keymapp" }
+  #- { id: 634148309, name: "Logic Pro X" }
+  - { id: 430255202, name: "Mactracker" }
+  #- { id: 1295203466, name: "Microsoft Remote Desktop 10" }
+  #- { id: 1041465860, name: "Model 15" }
+  #- { id: 823766827, name: "OneDrive" }
+  - { id: 764936294, name: "Purple Tree" }
+  #- { id: 1315583175, name: "Recipe Keeper" }
+  - { id: 409907375, name: "Remote Desktop" }
+  - { id: 1573919086, name: "Total Refresh (Safari Extension)" }
+  - { id: 1480933944, name: "Vimari (Safari Extension)" }
+  - { id: 1230249825, name: "VMware Remote Console" }
 
 mas_email: ""
 mas_password: ""
