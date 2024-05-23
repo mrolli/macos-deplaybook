@@ -10,4 +10,5 @@
   with_items:
     - neovim
     - git
+    - pandoc # for markdown table aligment
     - ruby
