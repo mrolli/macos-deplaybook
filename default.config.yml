@@ -33,7 +33,6 @@ homebrew_installed_packages:
   #  - composer
   - coreutils
   - ctags
-  - direnv
   - dos2unix
   #  - duti
   - exiftool
@@ -73,8 +72,6 @@ homebrew_installed_packages:
   - pnpm
   - podman
   - pstree
-  #  - Python@3.10
-  #  - Python@3.9
   - ripgrep
   - rsync
   - rubberband
@@ -86,17 +83,14 @@ homebrew_installed_packages:
   - tmux
   - tmux-mem-cpu-load
   - tmuxp
-  - vagrant-completion
   #  - vim
   - wallpaper   # used by theme switcher
   - watch
   - webp   # for handling webp images
   - wget
   - xz
-  - yamllint
   - yarn
   - youtube-dl
-  - zsh-completions
 
 homebrew_cask_appdir: /Applications
 homebrew_cask_apps:

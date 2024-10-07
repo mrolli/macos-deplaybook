@@ -7,8 +7,8 @@
     name: "{{ item }}"
     state: present
     update_homebrew: false
-  with_items:
+  loop:
     - neovim
+    - ast-grep  # for grug-far
     - git
-    - pandoc # for markdown table aligment
-    - ruby
+    - pandoc  # for markdown table aligment
