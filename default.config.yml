@@ -84,9 +84,9 @@ homebrew_installed_packages:
   - tmux-mem-cpu-load
   - tmuxp
   #  - vim
-  - wallpaper   # used by theme switcher
+  - wallpaper # used by theme switcher
   - watch
-  - webp   # for handling webp images
+  - webp # for handling webp images
   - wget
   - xz
   - yarn
@@ -109,7 +109,6 @@ homebrew_cask_apps:
   #  - guitar-pro
   #  - horos
   - iina
-  - karabiner-elements
   - keycastr
   - miniconda
   #  - native-access
