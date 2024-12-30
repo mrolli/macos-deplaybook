@@ -19,9 +19,6 @@ dockitems_persist: []
 configure_macos: true
 macos_script: "~/.macos --no-restart"
 
-configure_apps: true
-nvim_config_repo: https://github.com/mrolli/nvim.config.git
-
 # Install homebrew packages from Brewfile
 homebrew_use_brewfile: true
 homebrew_brewfile_dir: "{{ inventory_dir }}"
