@@ -23,30 +23,23 @@
       tags: ["dock"]
 
   tasks:
-    - import_tasks: tasks/dotfiles.yml
+    - name: Ensure dotfiles repository is cloned locally.
+      ansible.builtin.git:
+        repo: "{{ dotfiles_repo }}"
+        dest: "{{ dotfiles_repo_local_destination }}"
+        version: "{{ dotfiles_repo_version }}"
+        accept_newhostkey: "{{ gitmod_accept_newhostkey }}"
+        update: false
+      become: false
       when: configure_dotfiles
       tags: ["dotfiles"]
 
-    - import_tasks: tasks/macos.yml
+    - name: Run .macos in dotfiles.
+      command: "{{ macos_script }}"
+      changed_when: false
       when: configure_macos
       tags: ["macos"]
-
-    - import_tasks: tasks/nvim.yml
-      when: configure_apps
-      tags: ["nvim"]
-
-    - block:
-        - name: Uptime
-          ansible.builtin.shell: uptime
-          register: uptime
-          changed_when: false
-
-        - name: Output hostname and uptime
-          ansible.builtin.debug:
-            msg: "{{ ansible_hostname }}: {{ uptime.stdout }}"
-      tags: ["post"]
 
 - name: Run dotfiles' Ansible playbook
   import_playbook: "{{ lookup('ansible.builtin.env', 'HOME') }}/.dotfiles/ansible/main.yml"
   become: false
-  tags: ["dotfiles"]
