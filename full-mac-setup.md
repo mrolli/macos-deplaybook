@@ -16,25 +16,26 @@ Once on the desktop of my freshly installed Mac is ready:
 
 - Clone this very repo and run the `bootstrap` command. This will install Command Line Tools and Ansible
 - Sign in in App Store since mas can't sign in automatically and the setup wizard did not do that
-- Run the playbook `main.yml` with `--skip-tags post`.
+- Run the playbook `main.yml` with `--skip-tags post`. Make sure to use `-K` for
+  the sudo password
 - Start Synchronization tasks:
   - Open Photos and make sure iCloud sync options are correct
   - Open Music, make sure computer is authorized, and set Library sync options
 - Configure 1Password CLI usage to be able to retrieve secrets
-  - see https://developer.1password.com/docs/cli/get-started/#install
+  - see <https://developer.1password.com/docs/cli/get-started/#install>
 - Configure github.com authentication for gh and git
   - Run `gh auth login` and follow the https procedure
   - Copy `~/.gnupg` from another device for the time being # TODO: Put this in 1password and dotfiles
 - Install old-fashioned apps if required
   - Microsoft Office
-      - fetch latest from https://portal.office.com
-      - see also the [KB article](https://serviceportal.unibe.ch/sp?id=kb_article_view&sys_kb_id=b0d605bedb50901078ed3e482296199e)
-      - Start Word for the first time and login to M365 to activate Office
+    - fetch latest from <https://portal.office.com>
+    - see also the [KB article](https://serviceportal.unibe.ch/sp?id=kb_article_view&sys_kb_id=b0d605bedb50901078ed3e482296199e)
+    - Start Word for the first time and login to M365 to activate Office
   - Forticlient
     - fetch [latest FortiClient](https://secdl.unibe.ch/FortiClientVPNSetup-MacOSX-current.dmg)
     - follow this [KB article](https://serviceportal.unibe.ch/sp?id=kb_article_view&sys_kb_id=3f0029691b005050134ddc6a9b4bcb26)
 - Data synchronization
-  - iFinance: Sync latest DB from another device
+  - iFinance: (adjust paths in Preferences to point to iCloud / Sync latest DB from another device)
 - Manual settings to automate someday:
   - Safari:
     - activate additional extensions: AdGuard, Total Refresh, Vimari
