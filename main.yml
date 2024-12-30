@@ -35,10 +35,6 @@
       when: configure_apps
       tags: ["nvim"]
 
-    - import_tasks: tasks/usershell.yml
-      when: configure_usershell
-      tags: ["usershell"]
-
     - block:
         - name: Uptime
           ansible.builtin.shell: uptime

@@ -22,10 +22,6 @@ macos_script: "~/.macos --no-restart"
 configure_apps: true
 nvim_config_repo: https://github.com/mrolli/nvim.config.git
 
-configure_usershell: true
-# default_usershell: "{{ homebrew_prefix}}/bin/bash"
-default_usershell: "/bin/zsh"
-
 # Install homebrew packages from Brewfile
 homebrew_use_brewfile: true
 homebrew_brewfile_dir: "{{ inventory_dir }}"
