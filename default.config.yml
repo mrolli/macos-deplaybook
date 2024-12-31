@@ -3,22 +3,30 @@ downloads: ~/.ansible-downloads/
 gitmod_accept_newhostkey: true
 
 
+# Provision my dotfiles
 configure_dotfiles: true
 dotfiles_repo: https://github.com/mrolli/dotfiles.git
 dotfiles_repo_version: main
 dotfiles_repo_local_destination: "{{ ansible_env.HOME }}/.dotfiles"
 
 
+# Manage Dock items
 configure_dock: true
 dockitems_remove:
- - Launchpad
- - TV
+  - Launchpad
+  - TV
 dockitems_persist: []
 
 
+# Manage macOS settings
 configure_macos: true
-macos_script: "~/.macos --no-restart"
+macos_script: "~/.dotfiles/macos/macos --no-restart"
+
 
 # Install homebrew packages from Brewfile
+homebrew_taps: []
+homebrew_installed_packages: []
+homebrew_cask_apps: []
 homebrew_use_brewfile: true
 homebrew_brewfile_dir: "{{ inventory_dir }}"
+mas_installed_apps: []
