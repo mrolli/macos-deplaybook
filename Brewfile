@@ -85,6 +85,7 @@ mas "Disk Speed Test", id: 425264550
 mas "iFinance 5", id: 1500241909
 mas "Keymapp", id: 6472865291
 mas "Mactracker", id: 430255202
+mas "OneDrive", id: 823766827
 mas "Purple Tree", id: 764936294
 mas "Remote Desktop", id: 409907375
 mas "Vimari", id: 1480933944
