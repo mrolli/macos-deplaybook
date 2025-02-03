@@ -1,4 +1,5 @@
 tap "homebrew/bundle"
+tap "powershell/tap"
 brew "mas"
 
 # Git and its dependencies
@@ -25,6 +26,7 @@ brew "yarn"
 brew "azure-cli"
 #brew "hashicorp/tap/packer"
 #brew "hashicorp/tap/terraform"
+brew "powershell/tap/powershell"
 #brew "terraform-docs"
 #brew "tflint"
 #brew "trivy"
