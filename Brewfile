@@ -30,9 +30,10 @@ brew "azure-cli"
 #brew "trivy"
 
 
-# Container Environments
-#brew "colima"
-#brew "docker"
+# Container Environment
+brew "colima"
+brew "docker"
+brew "devcontainer"
 #brew "podman"
 
 
