@@ -55,6 +55,7 @@ brew "jq"
 #brew "mycli"
 brew "pinentry-mac"
 #brew "pstree"
+brew "starship"
 brew "tree"
 brew "watch"
 
