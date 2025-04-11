@@ -1,6 +1,7 @@
 tap "homebrew/bundle"
 tap "hashicorp/tap"
 tap "powershell/tap"
+tap "jorgelbg/tap"
 brew "mas"
 
 # Git and its dependencies
@@ -56,6 +57,7 @@ brew "imagemagick"
 brew "jq"
 #brew "mycli"
 brew "pinentry-mac"
+brew "jorgelbg/tap/pinentry-touchid"
 #brew "pstree"
 brew "starship"
 brew "tree"
