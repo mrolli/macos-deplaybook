@@ -76,7 +76,6 @@ cask "1password"
 cask "1password-cli"
 cask "alfred"
 cask "appcleaner"
-cask "displaylink"
 cask "drawio"
 cask "firefox"
 cask "font-jetbrains-mono"
@@ -107,4 +106,3 @@ mas "OneDrive", id: 823766827
 mas "Purple Tree", id: 764936294
 mas "Remote Desktop", id: 409907375
 mas "Vimari", id: 1480933944
-mas "Windows App", id: 1295203466
