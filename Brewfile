@@ -1,4 +1,5 @@
 tap "homebrew/bundle"
+tap "hashicorp/tap"
 tap "powershell/tap"
 brew "mas"
 
@@ -24,12 +25,13 @@ brew "yarn"
 
 # Cloud/Terraform related formulae
 brew "azure-cli"
-#brew "hashicorp/tap/packer"
-#brew "hashicorp/tap/terraform"
+brew "hashicorp/tap/packer"
+brew "hashicorp/tap/terraform"
+brew "hashicorp/tap/terraform-ls"
 brew "powershell/tap/powershell"
-#brew "terraform-docs"
-#brew "tflint"
-#brew "trivy"
+brew "terraform-docs"
+brew "tflint"
+brew "trivy"
 
 
 # Container Environment
