@@ -85,6 +85,14 @@ cask "visual-studio-code"
 cask "wezterm"
 
 
+# VS Code extensions
+vscode "github.codespaces"
+vscode "hashicorp.terraform"
+vscode "ms-azuretools.vscode-docker"
+vscode "ms-vscode-remote.remote-containers"
+vscode "vscodevim.vim"
+
+
 # AppStore
 mas "1Password for Safari", id: 1569813296
 mas "Bee DICOM Viewer", id: 1590273176
