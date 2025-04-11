@@ -63,6 +63,7 @@ brew "jorgelbg/tap/pinentry-touchid"
 brew "starship"
 brew "tree"
 brew "watch"
+brew "xidel"
 
 # Music Production
 cask "native-access"
