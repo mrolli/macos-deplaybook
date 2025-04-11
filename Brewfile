@@ -35,8 +35,8 @@ brew "trivy"
 
 
 # Container Environment
-brew "colima"
-brew "docker"
+#brew "colima"
+cask "docker"
 brew "devcontainer"
 #brew "podman"
 
