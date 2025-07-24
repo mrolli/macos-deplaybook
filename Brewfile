@@ -1,4 +1,3 @@
-tap "homebrew/bundle"
 tap "hashicorp/tap"
 tap "powershell/tap"
 tap "jorgelbg/tap"
@@ -26,12 +25,16 @@ brew "yarn"
 
 
 # Cloud/Terraform related formulae
+brew "aztfexport"
 brew "azure-cli"
+brew "checkov"
 brew "hashicorp/tap/packer"
 brew "hashicorp/tap/terraform"
 brew "hashicorp/tap/terraform-ls"
 brew "powershell/tap/powershell"
+brew "pre-commit"
 brew "terraform-docs"
+brew "tf-summarize"
 brew "tflint"
 brew "trivy"
 
@@ -45,6 +48,7 @@ brew "devcontainer"
 
 # CLI tools
 brew "bat"
+brew "conda-zsh-completion"
 brew "coreutils"
 brew "dockutil"
 brew "doggo"
@@ -57,6 +61,7 @@ brew "gnu-sed"
 brew "httpie"
 brew "imagemagick"
 brew "jq"
+brew "miniconda"
 #brew "mycli"
 brew "pinentry-mac"
 brew "jorgelbg/tap/pinentry-touchid"
@@ -89,7 +94,11 @@ cask "wezterm"
 
 # VS Code extensions
 vscode "github.codespaces"
+vscode "github.copilot"
+vscode "github.copilot-chat"
 vscode "hashicorp.terraform"
+vscode "ms-azuretools.vscode-azureterraform"
+vscode "ms-azuretools.vscode-containers"
 vscode "ms-azuretools.vscode-docker"
 vscode "ms-vscode-remote.remote-containers"
 vscode "vscodevim.vim"
@@ -97,8 +106,9 @@ vscode "vscodevim.vim"
 
 # AppStore
 mas "1Password for Safari", id: 1569813296
-mas "Bee DICOM Viewer", id: 1590273176
 mas "AdGuard for Safari", id: 1440147259
+mas "Bee DICOM Viewer", id: 1590273176
+mas "Blackmagic Disk Speed Test", id: 425264550
 mas "Brother P-touch Editor", id: 1453365242
 mas "Disk Speed Test", id: 425264550
 mas "iFinance 5", id: 1500241909
