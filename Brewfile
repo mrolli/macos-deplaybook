@@ -21,12 +21,15 @@ brew "node"
 brew "php"
 brew "pnpm"
 brew "ripgrep"
+brew "tree-sitter-cli"
 brew "yarn"
 
 
 # Cloud/Terraform related formulae
+brew "awscli"
 brew "aztfexport"
 brew "azure-cli"
+brew "azqr"
 brew "checkov"
 brew "hashicorp/tap/packer"
 brew "hashicorp/tap/terraform"
@@ -37,11 +40,13 @@ brew "terraform-docs"
 brew "tf-summarize"
 brew "tflint"
 brew "trivy"
+brew "node@22" # for compat with Azure Functions
 
 
 # Container Environment
 #brew "colima"
 cask "docker"
+cask "docker-desktop"
 brew "devcontainer"
 #brew "podman"
 
@@ -66,6 +71,7 @@ brew "miniconda"
 brew "pinentry-mac"
 brew "jorgelbg/tap/pinentry-touchid"
 #brew "pstree"
+brew "rsync"
 brew "starship"
 brew "tree"
 brew "watch"
@@ -80,23 +86,28 @@ mas "Logic Pro", id: 634148309
 # Casks
 cask "1password"
 cask "1password-cli"
-cask "alfred"
 cask "appcleaner"
 cask "drawio"
 cask "firefox"
+cask "focusrite-control-2"
 cask "font-jetbrains-mono"
 cask "font-symbols-only-nerd-font"
 cask "iina"
 cask "parsec"
+cask "raycast"
 cask "visual-studio-code"
 cask "wezterm"
 
 
 # VS Code extensions
+vscode "docker.docker"
 vscode "github.codespaces"
 vscode "github.copilot"
 vscode "github.copilot-chat"
 vscode "hashicorp.terraform"
+vscode "ms-azuretools.vscode-azurefunctions"
+vscode "ms-azuretools.vscode-azureresourcegroups"
+vscode "ms-azuretools.vscode-azurestaticwebapps"
 vscode "ms-azuretools.vscode-azureterraform"
 vscode "ms-azuretools.vscode-containers"
 vscode "ms-azuretools.vscode-docker"
@@ -111,8 +122,9 @@ mas "Bee DICOM Viewer", id: 1590273176
 mas "Blackmagic Disk Speed Test", id: 425264550
 mas "Brother P-touch Editor", id: 1453365242
 mas "Disk Speed Test", id: 425264550
+mas "GarageBand", id: 682658836
 mas "iFinance 5", id: 1500241909
-mas "Keymapp", id: 6472865291
+mas "keymapp", id: 6472865291
 mas "Mactracker", id: 430255202
 mas "OneDrive", id: 823766827
 mas "Purple Tree", id: 764936294
