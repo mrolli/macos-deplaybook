@@ -129,4 +129,3 @@ mas "Mactracker", id: 430255202
 mas "OneDrive", id: 823766827
 mas "Purple Tree", id: 764936294
 mas "Remote Desktop", id: 409907375
-mas "Vimari", id: 1480933944
