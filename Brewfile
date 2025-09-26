@@ -1,6 +1,9 @@
 tap "hashicorp/tap"
 tap "powershell/tap"
-tap "jorgelbg/tap"
+tap "jorgelbg/tap"    # pinentry-touchid
+#tap "azure/azd"      # Azure Developer CLI
+#tap "azure/bicep"    # Azure Bicep CLI
+tap "azure/functions" # Azure Functions Core Tools
 brew "mas"
 
 # Git and its dependencies
@@ -30,6 +33,7 @@ brew "awscli"
 brew "aztfexport"
 brew "azure-cli"
 brew "azqr"
+brew "azure-functions-core-tools@4"
 brew "checkov"
 brew "hashicorp/tap/packer"
 brew "hashicorp/tap/terraform"
