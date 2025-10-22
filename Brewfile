@@ -1,8 +1,8 @@
 tap "hashicorp/tap"
 tap "powershell/tap"
 tap "jorgelbg/tap"    # pinentry-touchid
-#tap "azure/azd"      # Azure Developer CLI
-#tap "azure/bicep"    # Azure Bicep CLI
+tap "azure/azd"       # Azure Developer CLI
+tap "azure/bicep"     # Azure Bicep CLI
 tap "azure/functions" # Azure Functions Core Tools
 brew "mas"
 
@@ -21,6 +21,7 @@ brew "fd"
 brew "fzf"
 brew "lazygit"
 brew "node"
+brew "pandoc" # for markdown table alignment
 brew "php"
 brew "pnpm"
 brew "ripgrep"
@@ -30,22 +31,24 @@ brew "yarn"
 
 # Cloud/Terraform related formulae
 brew "awscli"
-brew "aztfexport"
-brew "azure-cli"
-brew "azqr"
-brew "azure-functions-core-tools@4"
 brew "checkov"
 brew "hashicorp/tap/packer"
 brew "hashicorp/tap/terraform"
 brew "hashicorp/tap/terraform-ls"
-brew "powershell/tap/powershell"
 brew "pre-commit"
 brew "terraform-docs"
 brew "tf-summarize"
 brew "tflint"
 brew "trivy"
-brew "node@22" # for compat with Azure Functions
 
+# Cloud Azure-specific tools
+brew "aztfexport"
+brew "azure-cli"
+brew "azqr"
+brew "azure/azd/azd"
+brew "azure/functions/azure-functions-core-tools@4"
+brew "powershell/tap/powershell"
+brew "node@22" # for compat with Azure Functions
 
 # Container Environment
 #brew "colima"
@@ -63,6 +66,7 @@ brew "dockutil"
 brew "doggo"
 brew "dos2unix"
 brew "exiftool"
+brew "fastfetch"
 brew "ffmpeg"
 brew "findutils"
 brew "gnupg"
@@ -71,6 +75,7 @@ brew "httpie"
 brew "imagemagick"
 brew "jq"
 brew "miniconda"
+brew "mpv"
 #brew "mycli"
 brew "pinentry-mac"
 brew "jorgelbg/tap/pinentry-touchid"
@@ -78,6 +83,7 @@ brew "jorgelbg/tap/pinentry-touchid"
 brew "rsync"
 brew "starship"
 brew "tree"
+brew "viu"
 brew "watch"
 brew "xidel"
 
@@ -95,7 +101,9 @@ cask "drawio"
 cask "firefox"
 cask "focusrite-control-2"
 cask "font-jetbrains-mono"
+cask "font-sf-mono"
 cask "font-symbols-only-nerd-font"
+cask "ghostty"
 cask "iina"
 cask "parsec"
 cask "raycast"
