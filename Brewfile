@@ -52,8 +52,10 @@ brew "node@22" # for compat with Azure Functions
 
 # Container Environment
 #brew "colima"
+brew "container"
 cask "docker"
 cask "docker-desktop"
+cask "docker-completion"
 brew "devcontainer"
 #brew "podman"
 
