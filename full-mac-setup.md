@@ -12,6 +12,9 @@ Before starting, I completed Apple's mandatory macOS setup wizard that includes
 - (optionally) signing into my iCloud account
 - (optionally) setting up stuff like TouchID
 
+**CAVE:** For setting a lot of stuff using `default write`, the terminal apps used need
+full-disk-access!
+
 Once on the desktop of my freshly installed Mac is ready:
 
 - Clone this very repo and run the `bootstrap` command. This will install Command Line Tools and Ansible
