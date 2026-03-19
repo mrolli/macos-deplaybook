@@ -4,6 +4,8 @@ tap "jorgelbg/tap"    # pinentry-touchid
 tap "azure/azd"       # Azure Developer CLI
 tap "azure/bicep"     # Azure Bicep CLI
 tap "azure/functions" # Azure Functions Core Tools
+tap "devconhq/tap/devcon"
+tpa "netbirdio/tap/netbird"
 brew "mas"
 
 # Git and its dependencies
@@ -27,6 +29,8 @@ brew "pnpm"
 brew "ripgrep"
 brew "tree-sitter-cli"
 brew "yarn"
+brew "copilot-cli"
+brew "terraform-mcp-server"
 
 
 # Cloud/Terraform related formulae
@@ -55,18 +59,21 @@ brew "node@22" # for compat with Azure Functions
 brew "container"
 cask "docker"
 cask "docker-desktop"
-cask "docker-completion"
+brew "docker-completion"
 brew "devcontainer"
 #brew "podman"
+brew "devcon"
 
 
 # CLI tools
 brew "bat"
 brew "conda-zsh-completion"
 brew "coreutils"
+brew "ddgr"
 brew "dockutil"
 brew "doggo"
 brew "dos2unix"
+brew "dust"
 brew "exiftool"
 brew "eza"
 brew "fastfetch"
@@ -81,10 +88,12 @@ brew "mpv"
 #brew "mycli"
 brew "pinentry-mac"
 brew "jorgelbg/tap/pinentry-touchid"
+brew "pngquant"
 #brew "pstree"
 brew "rsync"
 brew "starship"
 brew "tmux"
+brew "tokei"
 brew "tree"
 brew "viu"
 brew "watch"
