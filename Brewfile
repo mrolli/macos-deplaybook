@@ -4,8 +4,9 @@ tap "jorgelbg/tap"    # pinentry-touchid
 tap "azure/azd"       # Azure Developer CLI
 tap "azure/bicep"     # Azure Bicep CLI
 tap "azure/functions" # Azure Functions Core Tools
+tap "azure/kubelogin", "https://github.com/Azure/homebrew-kubelogin"
 tap "devconhq/tap/devcon"
-tpa "netbirdio/tap/netbird"
+tap "terraform-linters/tap"
 brew "mas"
 
 # Git and its dependencies
@@ -36,13 +37,12 @@ brew "terraform-mcp-server"
 # Cloud/Terraform related formulae
 brew "awscli"
 brew "checkov"
-brew "hashicorp/tap/packer"
+# brew "hashicorp/tap/packer"
 brew "hashicorp/tap/terraform"
 brew "hashicorp/tap/terraform-ls"
 brew "pre-commit"
 brew "terraform-docs"
 brew "tf-summarize"
-brew "tflint"
 brew "trivy"
 
 # Cloud Azure-specific tools
@@ -51,22 +51,27 @@ brew "azure-cli"
 brew "azqr"
 brew "azure/azd/azd"
 brew "azure/functions/azure-functions-core-tools@4"
-brew "powershell/tap/powershell"
+brew "powershell"
 brew "node@22" # for compat with Azure Functions
+brew "go"
+go "github.com/Azure/alzlib/cmd/alzlibtool"
+
 
 # Container Environment
 #brew "colima"
 brew "container"
-cask "docker"
-cask "docker-desktop"
-brew "docker-completion"
 brew "devcontainer"
-#brew "podman"
 brew "devcon"
+brew "azure/kubelogin/kubelogin"
+#cask "docker"
+#cask "docker-desktop"
+#brew "docker-completion"
+#brew "podman"
 
 
 # CLI tools
 brew "bat"
+brew "id-unibe-ch/tap/bildschirmuniversum"
 brew "conda-zsh-completion"
 brew "coreutils"
 brew "ddgr"
@@ -89,15 +94,17 @@ brew "mpv"
 brew "pinentry-mac"
 brew "jorgelbg/tap/pinentry-touchid"
 brew "pngquant"
-#brew "pstree"
 brew "rsync"
 brew "starship"
+brew "telnet"
+brew "uv" #
 brew "tmux"
 brew "tokei"
 brew "tree"
 brew "viu"
 brew "watch"
 brew "xidel"
+brew "yq"
 
 # Music Production
 cask "native-access"
@@ -122,9 +129,12 @@ cask "miniconda"
 cask "parsec"
 cask "raycast"
 cask "steam"
+cask "terraform-linters/tap/tflint"
 cask "visual-studio-code"
 cask "wezterm"
 
+# npm packages
+npm "@azure/static-web-apps-cli"
 
 # VS Code extensions
 vscode "docker.docker"
@@ -148,6 +158,7 @@ mas "AdGuard for Safari", id: 1440147259
 mas "Bee DICOM Viewer", id: 1590273176
 mas "Blackmagic Disk Speed Test", id: 425264550
 mas "Brother P-touch Editor", id: 1453365242
+mas "Delinea Web Password Filler", id: 1543686606
 mas "Disk Speed Test", id: 425264550
 mas "GarageBand", id: 682658836
 mas "iFinance 5", id: 1500241909
@@ -156,3 +167,4 @@ mas "Mactracker", id: 430255202
 mas "OneDrive", id: 823766827
 mas "Purple Tree", id: 764936294
 mas "Remote Desktop", id: 409907375
+mas "Windows App", id: 1295203466
